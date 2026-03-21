@@ -1,0 +1,327 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1b1919;
+  padding-top: 70px ;
+
+}
+
+
+/* Header Section*/
+
+.header {
+display: flex;
+background: #000000;
+justify-content: space-between;
+padding: 15px 25px;
+color: white;
+align-items: center;
+top: 0;
+left: 0;
+right: 0;
+position: fixed;
+z-index: 1000;
+height: 40px;
+}
+
+.logo{
+  font-weight: bold;
+  font-family: 'Courier New';
+  color: rgb(75, 236, 75);
+
+}
+
+/* Nav*/
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+  
+}
+
+nav a:hover  {
+  color: rgb(75, 236, 75);
+ 
+}
+
+/* HAMBURGER BUTTON */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #000;
+    width: 200px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    display: none;       /* hidden by default */
+  }
+
+  nav ul.show {
+    display: flex;       /* display when menu is opened */
+  }
+
+  .menu-btn {
+    display: block;      /* show hamburger on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dropdown-menu {
+    position: static;
+    background: #000;
+    padding-left: 20px;
+    border-left: 2px solid rgb(75, 236, 75);
+    margin-top: 5px;
+  }
+}
+
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #111;
+  padding: 10px 0;
+  top: 30px;
+  left: 0;
+  width: 160px;
+  border-radius: 4px;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: #043104;
+}
+
+/* Show dropdown when JS adds "open" */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+
+
+/* End Of Header Section*/
+
+
+
+/* Main Section */
+
+.League-container {
+  background-color: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+
+
+h2 {
+  color: white;
+  margin-left: 10px;
+}
+
+.matchcard-container {
+  background-color:  rgb(1, 49, 1);;
+  display: flex;
+  height: 60px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px ;
+  margin-right: 10px ;
+  margin-top: 10px;  
+  margin-bottom: 10px;
+  border-left: 3px solid rgb(245, 243, 243);
+
+}
+
+
+
+
+.live-button {
+ background: #ff0000;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  padding: 5px;
+  border-radius: 12px;
+
+}
+
+
+.watch-button {
+  background-color: red;
+  color: white;
+  margin-right: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+
+}
+
+.Match-status {
+color: white;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.Match-Game {
+  color: white;
+  font-weight: bold;
+
+}
+
+.match-time{
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+.match-time.countdown {
+  font-weight: bold;
+  color: #00ff41;
+  margin: 0 10px;
+}
+
+
+.live-button, .Match-status {
+  display: none;
+}
+
+
+
+
+/* ====================
+   MOBILE RESPONSIVE FIXES - Minimal changes only
+==================== */
+
+/* On screens smaller than 768px (phones/tablets) */
+@media (max-width: 768px) {
+
+  /* Make cards stack vertically instead of horizontal squeeze */
+  .matchcard-container {
+    height: auto;                  /* remove fixed height */
+    flex-direction: column;        /* stack elements top-to-bottom */
+    align-items: flex-start;       /* left-align everything */
+    justify-content: center;
+    padding: 12px 10px;            /* more vertical space */
+    gap: 8px;                      /* space between time/game/button */
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  /* Adjust individual elements for vertical layout */
+  .live-button {
+    margin-left: 0;
+    margin-bottom: 6px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .Match-Game {
+    font-size: 1.1rem;             /* slightly smaller but readable */
+    text-align: left;
+    margin: 4px 0;
+  }
+
+  .match-time,
+  .match-time.countdown {
+    margin-left: 0;
+    margin: 4px 0;
+    font-size: 1rem;
+  }
+
+  .Match-status {
+    margin: 4px 0;
+    text-align: left;
+  }
+
+  .watch-button {
+    margin-right: 0;
+    margin-top: 8px;
+    padding: 10px 24px;
+    width: 100%;                   /* full-width button for easy tap */
+    max-width: 200px;              /* not too wide */
+    align-self: center;            /* center it */
+  }
+
+  /* Extra space for league sections on mobile */
+  .League-container {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  h2 {
+    margin-left: 5px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Optional: Force 1 card per row on very small phones (<480px) */
+@media (max-width: 480px) {
+  .matchcard-container {
+    padding: 10px;
+  }
+
+  .Match-Game {
+    font-size: 1rem;
+  }
+
+  .watch-button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+
+
+
+

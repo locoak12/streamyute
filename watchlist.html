@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>streamyute</title>
+  <link rel="stylesheet" href="watchlist.css">
+
+
+
+
+</head>
+
+
+
+<body>
+  <header class="header">
+    <a href="index.html"><h1 class="logo">Streamyute</h1> </a>
+    <div class="menu-btn">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#">Champions League</a></li>
+        <li><a href="#">Europa League</a></li>
+        <li><a href="#">EPL</a></li>
+        <li><a href="#">Laliga</a></li>
+        <li><a href="#">Serie A</a></li>
+        <!--<li><a href="#">Bundesliga</a></li> -->
+
+
+
+
+        <!--  <li class="dropdown">
+
+           
+          <a href="#" class="dropdown-toggle">International Matches ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Euro</a></li>
+            <li><a href="#">World Cup</a></li>
+            <li><a href="#">AFCON</a></li>
+            <li><a href="#">Copa America</a></li>
+            <li><a href="#">Asia Cup</a></li>
+          </ul>
+         
+    
+        </li>
+ -->
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <!-- Main section-->
+
+  <div class="watchlist-container">
+    <h2 id="match-title">Loading match...</h2>
+
+    <div class="table-wrapper">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Streamer</th>
+            <th>Link</th>
+            <th>Mobile</th>
+            <th>Quality</th>
+            <th>Ads</th>
+            <th>Language</th>
+             <th>Action</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+  <td data-label="Streamer" class="streamer">Streameast24</td>
+  <td data-label="Link"><a href="https://example.com/stream/abc123" target="_blank">Watch Link</a></td>
+  <td data-label="Mobile" class="mobile-yes">Yes</td>
+  <td data-label="Quality" class="quality-hd">1080p HD</td>
+  <td data-label="Ads" class="ads-low">1</td>
+  <td data-label="Language">English</td>
+  <td data-label="Action"><a href="https://example.com/stream/abc123" target="_blank" class="watch-btn">Watch</a></td>
+</tr>
+
+<tr>
+  <td data-label="Streamer" class="streamer">Streameast24</td>
+  <td data-label="Link"><a href="https://example.com/stream/abc123" target="_blank">Watch Link</a></td>
+  <td data-label="Mobile" class="mobile-yes">Yes</td>
+  <td data-label="Quality" class="quality-hd">1080p HD</td>
+  <td data-label="Ads" class="ads-low">1</td>
+  <td data-label="Language">English</td>
+  <td data-label="Action"><a href="https://example.com/stream/abc123" target="_blank" class="watch-btn">Watch</a></td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- End of main section-->
+  <script>
+    // === Menu toggle (keep this) ===
+    const menuBtn = document.querySelector(".menu-btn");
+    const navMenu = document.querySelector("nav ul");
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      menuBtn.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
+    });
+
+    // === DYNAMIC STREAMS PER MATCH ===
+    const streamsData = {
+      "Barcelona vs Newcastle": [
+        {
+          streamer: "Streameast24",
+          link: "https://www.streameast24.com/live/important-games/match/barcelona-vs-newcastle-united/69ba5b81876fbdae5c3ca33d",
+          mobile: "Yes",
+          quality: "1080p HD",
+          ads: "1",
+          language: "English"
+        },
+        {
+          streamer: "oyostreams",
+          link: "https://oyostreams.com/live/important-games/match/barcelona-vs-newcastle-united/69ba5b81876fbdae5c3ca33d",
+          mobile: "Yes",
+          quality: "HD",
+          ads: "2–3",
+          language: "English"
+        },
+
+        {
+          streamer: "xstreameast",
+          link: "https://xstreameast.xyz/match/newcastle-united-vs-barcelona/11469",
+          mobile: "Yes",
+          quality: "HD",
+          ads: "2–3",
+          language: "English"
+        }
+
+      ],
+
+      "Liverpool vs Galatasaray": [
+        {
+          streamer: "Oyostreams",
+          link: "https://oyostreams.com/live/important-games/match/liverpool-vs-galatasaray/69ba5b81876fbdae5c3ca33e",
+          mobile: "Yes",
+          quality: "1080p HD",
+          ads: "1",
+          language: "English"
+        },
+        {
+          streamer: "Streameast24",
+          link: "https://www.streameast24.com/live/important-games/match/liverpool-vs-galatasaray/69ba5b81876fbdae5c3ca33e",
+          mobile: "Yes",
+          quality: "HD",
+          ads: "2",
+          language: "English"
+        },
+
+        {
+          streamer: "xstreameast",
+          link: "https://xstreameast.xyz/match/galatasaray-vs-liverpool/11471",
+          mobile: "Yes",
+          quality: "HD",
+          ads: "2",
+          language: "English"
+        }
+
+
+      ],
+
+      "Bayern Munich vs Atalanta": [
+        {
+          streamer: "oyostreams",
+          link: "https://oyostreams.com/live/uefa-champions-league/match/bayern-munchen-vs-atalanta/69ba5b81876fbdae5c3ca340",
+          mobile: "Yes",
+          quality: "1080p",
+          ads: "0–1",
+          language: "English"
+        },
+
+        {
+          streamer: "streameast24",
+          link: "https://www.streameast24.com/live/uefa-champions-league/match/bayern-munchen-vs-atalanta/69ba5b81876fbdae5c3ca340",
+          mobile: "Yes",
+          quality: "1080p",
+          ads: "0–1",
+          language: "English"
+        },
+
+        {
+          streamer: "xstreameast",
+          link: "https://xstreameast.xyz/match/atalanta-vs-bayern-munich/11470",
+          mobile: "Yes",
+          quality: "1080p",
+          ads: "0–1",
+          language: "English"
+        }
+
+
+      ],
+
+      "Tottenham vs Atletico Madrid": [
+        {
+          streamer: "oyostreams",
+          link: "https://oyostreams.com/live/important-games/match/tottenham-hotspur-vs-atletico-madrid/69ba5b81876fbdae5c3ca33f",
+          mobile: "No",
+          quality: "720p",
+          ads: "2",
+          language: "English"
+        },
+
+        {
+          streamer: "streameast24",
+          link: "https://www.streameast24.com/live/important-games/match/tottenham-hotspur-vs-atletico-madrid/69ba5b81876fbdae5c3ca33f",
+          mobile: "No",
+          quality: "720p",
+          ads: "2",
+          language: "English"
+        },
+
+
+        {
+          streamer: "xstreameast",
+          link: "https://xstreameast.xyz/match/atl-tico-madrid-vs-tottenham-hotspur/11472",
+          mobile: "No",
+          quality: "720p",
+          ads: "2",
+          language: "English"
+        },
+
+
+        // add more...
+      ]
+      // ← You can add more matches here later (Premier League, etc.)
+    };
+
+function renderStreamsTable(matchName) {
+  const tbody = document.querySelector("tbody");
+  tbody.innerHTML = ""; // clear old rows
+
+  const streams = streamsData[matchName] || [];
+
+  if (streams.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding:20px;">No streams added yet for this match</td></tr>`;
+    return;
+  }
+
+  streams.forEach(s => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td data-label="Streamer" class="streamer">${s.streamer}</td>
+      <td data-label="Link"><a href="${s.link}" target="_blank">Watch Link</a></td>
+      <td data-label="Mobile" class="${s.mobile === 'Yes' ? 'mobile-yes' : 'mobile-no'}">${s.mobile}</td>
+      <td data-label="Quality" class="${s.quality.includes('HD') ? 'quality-hd' : 'quality-sd'}">${s.quality}</td>
+      <td data-label="Ads" class="${s.ads.includes('1') || s.ads.includes('0') ? 'ads-low' : s.ads.includes('2') || s.ads.includes('3') ? 'ads-medium' : 'ads-high'}">${s.ads}</td>
+      <td data-label="Language">${s.language}</td>
+      <td data-label="Action"><a href="${s.link}" target="_blank" class="watch-btn">Watch</a></td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+    // === Update title + render correct streams ===
+    function updateMatchHeader() {
+      const params = new URLSearchParams(window.location.search);
+      let matchName = params.get("match");
+
+      const titleEl = document.getElementById("match-title");
+
+      if (!matchName) {
+        titleEl.textContent = "Match not found";
+        return;
+      }
+
+      document.title = matchName + " | StreamYute";
+      titleEl.textContent = matchName;
+
+      // Render the right streams for this match
+      renderStreamsTable(matchName);
+    }
+
+    // Run it
+    updateMatchHeader();
+    setInterval(updateMatchHeader, 1000); // keeps countdown fresh if you add it later
+  </script>
+</body>
+
+</html>
