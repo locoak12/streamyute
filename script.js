@@ -85,7 +85,7 @@ const matchesByLeague = {
 
 
      {
-      game: " Barcelona vs Newcastle",
+      game: " Barcelon vs Newcastle",
       kickoff: "2026-03-20T17:45:00Z",
       url: "watchlist.html?match=Barcelona vs Newcastle",
       top: true
