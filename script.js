@@ -81,7 +81,7 @@ function updateMatchCards() {
 }
 const matchesByLeague = {
 
-  champio: [
+  champions: [
 
 
      {
