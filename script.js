@@ -224,7 +224,7 @@ function renderMatches(matches, containerId) {
 
 // Render each league
 renderMatches(matchesByLeague.premier, "premier-league-matches");
-//renderMatches(matchesByLeague.laliga, "laliga-matches");
+renderMatches(matchesByLeague.laliga, "laliga-matches");
 //renderMatches(matchesByLeague.serieA, "serieA-matches");
 renderMatches(matchesByLeague.champions, "champions-League-matches");
 
