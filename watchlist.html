@@ -20,11 +20,11 @@
     <div class="menu-btn">☰</div>
     <nav>
       <ul>
-        <li><a href="#">Champions League</a></li>
-        <li><a href="#">Europa League</a></li>
-        <li><a href="#">EPL</a></li>
-        <li><a href="#">Laliga</a></li>
-        <li><a href="#">Serie A</a></li>
+        <li><a href="index.html">Champions League</a></li>
+       <!-- <li><a href="index.html">Europa League</a></li> -->
+        <li><a href="index.html">EPL</a></li>
+        <li><a href="index.html">Laliga</a></li>
+        <!--<li><a href="index.html">Serie A</a></li> -->
         <!--<li><a href="#">Bundesliga</a></li> -->
 
 
@@ -62,7 +62,6 @@
         <thead>
           <tr>
             <th>Streamer</th>
-            <th>Link</th>
             <th>Mobile</th>
             <th>Quality</th>
             <th>Ads</th>
@@ -74,7 +73,6 @@
         <tbody>
 <tr>
   <td data-label="Streamer" class="streamer">Streameast24</td>
-  <td data-label="Link"><a href="https://example.com/stream/abc123" target="_blank">Watch Link</a></td>
   <td data-label="Mobile" class="mobile-yes">Yes</td>
   <td data-label="Quality" class="quality-hd">1080p HD</td>
   <td data-label="Ads" class="ads-low">1</td>
@@ -84,7 +82,6 @@
 
 <tr>
   <td data-label="Streamer" class="streamer">Streameast24</td>
-  <td data-label="Link"><a href="https://example.com/stream/abc123" target="_blank">Watch Link</a></td>
   <td data-label="Mobile" class="mobile-yes">Yes</td>
   <td data-label="Quality" class="quality-hd">1080p HD</td>
   <td data-label="Ads" class="ads-low">1</td>
@@ -253,7 +250,6 @@ function renderStreamsTable(matchName) {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td data-label="Streamer" class="streamer">${s.streamer}</td>
-      <td data-label="Link"><a href="${s.link}" target="_blank">Watch Link</a></td>
       <td data-label="Mobile" class="${s.mobile === 'Yes' ? 'mobile-yes' : 'mobile-no'}">${s.mobile}</td>
       <td data-label="Quality" class="${s.quality.includes('HD') ? 'quality-hd' : 'quality-sd'}">${s.quality}</td>
       <td data-label="Ads" class="${s.ads.includes('1') || s.ads.includes('0') ? 'ads-low' : s.ads.includes('2') || s.ads.includes('3') ? 'ads-medium' : 'ads-high'}">${s.ads}</td>
