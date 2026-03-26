@@ -116,9 +116,9 @@ const matchesByLeague = {
   ],
   premier: [
     {
-      game: " Burnley vs Bournemouth",
-      kickoff: "2026-03-14T16:00:00Z",
-      url: "watchlist.html?match= Burnley vs Bournemouth",
+      game: " Arsenal vs Bournemouth",
+      kickoff: "2026-04-11T11:30:00Z",
+      url: "watchlist.html?match= Arsenal vs Bournemouth",
 
     },
     {
