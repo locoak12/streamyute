@@ -66,7 +66,7 @@ function updateMatchCards() {
     } 
     else {
       text = `Ended (${localTime})`;
-      color = '#0e0909';
+      color = '#6d6262';
     }
 
     countdownEl.textContent = text;
@@ -119,35 +119,52 @@ const matchesByLeague = {
       game: " Arsenal vs Bournemouth",
       kickoff: "2026-04-11T11:30:00Z",
       url: "watchlist.html?match= Arsenal vs Bournemouth",
+      top: true
 
     },
     {
-      game: "Sunderland vs Brighton",
-      kickoff: "2026-03-14T16:00:00Z",
-      url: "watchlist.html?match= Sunderland vs Brighton"
+      game: "Brentford vs Everton",
+      kickoff: "2026-04-11T14:00:00Z",
+      url: "watchlist.html?match= Brentford vs Everton"
     },
 
     {
-      game: "Chelsea vs Brentford",
-      kickoff: "2026-03-14T18:30:00Z",
-      url: "watchlist.html?match=Chelsea vs Brentford",
+      game: "Liverpool vs Fulham",
+      kickoff: "2026-04-11T16:30:00Z",
+      url: "watchlist.html?match=Liverpool vs Fulham",
       top: true
     },
 
     {
-      game: "Arsenal vs Everton",
-      kickoff: "2026-03-14T18:30:00Z",
-      url: "watchlist.html?match= Arsenal vs Everton",
-      top: true
+      game: "Crystal Palace vs Newcastle",
+      kickoff: "2026-04-12T13:00:00Z",
+      url: "watchlist.html?match= Crystal Palace vs Newcastle",
+      
 
     },
 
     {
-      game: "West Ham vs Man City",
-      kickoff: "2026-03-14T21:00:00Z",
-      url: "watchlist.html?match=Newcastle-vs-Everton",
+      game: "Sundarland vs Tottenham",
+      kickoff: "2026-04-12T13:00:00Z",
+      url: "watchlist.html?match=Sundarland vs Tottenham",
+
+    },
+
+    {
+      game: "Chelsea vs Man City",
+      kickoff: "2026-04-12T13:00:00Z",
+      url: "watchlist.html?match=Chelsea vs Man City",
+      top: true
+    },
+
+    {
+      game: "Man United vs Leeds United",
+      kickoff: "2026-04-13T19:00:00Z",
+      url: "watchlist.html?match=Man United vs Leeds United",
       top: true
     }
+
+
 
   ],
 
