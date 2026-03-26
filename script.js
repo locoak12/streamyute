@@ -45,7 +45,7 @@ function updateMatchCards() {
     const localTime = formatter.format(kickoffDate);
 
     let text = '';
-    let color = '#000000';
+    let color = '#6d6262';
 
     if (diff > 0) {
       const h = Math.floor(diff / 3600000).toString().padStart(2, '0');
