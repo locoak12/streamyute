@@ -171,24 +171,24 @@ const matchesByLeague = {
   laliga: [
 
     {
-      game: "Atletico Mardrid vs Getafe",
-      kickoff: "2026-03-14T16:15:00Z",
-      url: "watchlist.html?match=Atletico Mardrid vs Getafe",
+      game: "	Mallorca vs Real Madrid",
+      kickoff: "2026-04-04T14:15:00Z",
+      url: "watchlist.html?match=Mallorca vs Real Madrid",
       top: true
     },
 
     {
-      game: "Real Madrid vs ELche",
-      kickoff: "2026-03-14T21:00:00Z",
-      url: "watchlist.html?match=Real Madrid vs ELche",
+      game: "Atletico Madrid vs Barcelona",
+      kickoff: "2026-04-04T19:00:00Z",
+      url: "watchlist.html?match=Atletico Madrid vs Barcelona",
       top: true
     },
 
     {
-      game: "Barcelona vs Sevila",
-      kickoff: "2026-03-15T16:15:00Z",
-      url: "watchlist.html?match=Barcelona vs Sevila",
-      top: true
+      game: "Getafe vs Athletic Club",
+      kickoff: "2026-04-05T12:00:00Z",
+      url: "watchlist.html?match=Getafe vs Athletic Club",
+      
     }
 
   ],
