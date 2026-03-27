@@ -38,8 +38,6 @@ function updateMatchCards() {
       weekday: 'short',
       day:     'numeric',
       month:   'short',
-      hour:    '2-digit',
-      minute:  '2-digit',
       hour12:  false
     });
     const localTime = formatter.format(kickoffDate);
@@ -109,7 +107,7 @@ const matchesByLeague = {
     {
       game: "Psg vs Liverpool",
       kickoff: "2026-04-08T19:00:00Z",
-      url: "watchlist.html?match=Psg vs Liverpool",
+      url: "watchlist.html?match=PSG vs Liverpool",
       top: true
     },
 
