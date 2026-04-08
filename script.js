@@ -82,20 +82,6 @@ const matchesByLeague = {
   champions: [
 
 
-     {
-      game: " Real Madrid vs Bayern",
-      kickoff: "2026-04-07T19:00:00Z",
-      url: "watchlist.html?match=Real Madrid vs Bayern",
-      top: true
-    },
-
-    {
-      game: "Sporting vs Arsenal",
-      kickoff: "2026-04-07T19:00:00Z",
-      url: "watchlist.html?match=Sporting vs Arsenal",
-      top: true
-    },
-
 
     {
       game: "Barcelona vs Atletico",
